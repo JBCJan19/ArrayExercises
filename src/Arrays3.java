@@ -3,16 +3,28 @@ import java.util.Scanner;
 public class Arrays3 {
     public static void main(String[] args){
 
-        int[] myArray = new int [10];
+        // Declare new array with 10 elements
+        int[] numbers = new int [10];
+
+        // Create new object of the Scanner class to read in input
         Scanner in = new Scanner(System.in);
 
         int sum =0;
-        for(int i = 0; i<myArray.length; i++){
-            System.out.println("Enter numbers from 1-10");
-            myArray[i]=in.nextInt();
-            sum = sum + myArray[i];
+
+        // Declare for loop to run 10 times
+        for(int i = 0; i < numbers.length; i++){
+            // Prompt user to enter in 10 numbers
+            System.out.print("Enter number: ");
+
+            // Read in number from user, store into array element (numbers[i])
+            numbers[i] = in.nextInt();
+
+            // Add that number to "sum"
+            sum = sum + numbers[i];
         }
-        System.out.println("Total is " + sum );
+
+        // Print out sum
+        System.out.println("Sum of inputs: " + sum );
 
     }
 }

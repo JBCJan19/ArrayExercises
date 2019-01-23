@@ -2,21 +2,32 @@ import java.util.Scanner;
 
 public class Arrays4 {
     public static void main(String[] args){
-        int total=0;
-        double avrage=0;
-        int[]myNumber=new int[3];
 
-        Scanner sc=new Scanner(System.in);
+        int sum = 0;
+        double average = 0;
 
-        for (int index=0;index<myNumber.length;index++){
-            System.out.println("pleae enter the number");
+        // Declare array to hold 10 numbers
+        int[] numbers = new int[10];
 
-            int userInputNum=sc.nextInt();
-            myNumber[index]=userInputNum;
-            total=total+myNumber[index];
-            avrage=total/myNumber.length;
+        // Declare new object of the Scanner class
+        Scanner in = new Scanner(System.in);
+
+        // Loop runs 10 times
+        for (int index=0; index < numbers.length; index++){
+            //Prompt user to enter number
+            System.out.print("Enter number: ");
+
+            // Read in user input and store into array
+            numbers[index] = in.nextInt();
+
+            // Add that input to the sum
+            sum = sum + numbers[index];
         }
 
-        System.out.println(avrage);
+        // Calculate the average
+        average = sum / numbers.length;
+
+        // Print out the average
+        System.out.println(average);
     }
 }
